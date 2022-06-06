@@ -71,6 +71,12 @@ apiPromise
       })
   );
 
+let badPromise = fetch("https://grandcircusco.github.io/demo-apis/wrong.json")
+  .then((res) => res.json())
+  .catch((error) => {
+    console.log("FAILED", error);
+  });
+
 // console.log(capNamesPromise());
 //   .then((response) => {
 //     console.log(response.count);
@@ -103,12 +109,6 @@ apiPromise
 // });
 
 // const countPromise = ()
-
-let badPromise = fetch("https://grandcircusco.github.io/demo-apis/wrong.json")
-  .then((res) => res.json())
-  .catch((error) => {
-    console.log("FAILED", error);
-  });
 
 //ABOVE CODE GOOD.
 
